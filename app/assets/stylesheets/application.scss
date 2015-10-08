@@ -27,7 +27,7 @@ $jumbotron-bg:                     white;
 @mixin transition ($seconds) {
 	-webkit-transition: $seconds;
 	-moz-transition: $seconds;
-	-0-transition: $seconds;
+	-o-transition: $seconds;
 	transition: $seconds;
 }
 
