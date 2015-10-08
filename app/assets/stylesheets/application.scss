@@ -35,6 +35,7 @@ $jumbotron-bg:                     white;
  @import "bootstrap";
 a {
 	color: #D9853B;
+	@include transition(.4s);
 	&:hover {
 	color: darken(#D9853B, 10%);
 	text-decoration: none;
