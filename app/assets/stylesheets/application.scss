@@ -15,13 +15,19 @@
  */
  @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
-$body-bg: 							#ECECEA;
+$teal:                              #558C89;
+$lightTeal:                         #74AFAD;
+$orange:                            #D9853B;
+$offWhite:                          #ECECEA;
+$white:                             #ffffff;
+$text:                              #585457;
+$body-bg: 							$offWhite;
 $font-family-sans-serif: 			'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height:                    45px;
-$navbar-default-bg:                white;
-$navbar-default-brand-color:       #558C89;
-$brand-primary:                    #558C89;
-$jumbotron-bg:                     white;
+$navbar-default-bg:                $white;
+$navbar-default-brand-color:       $teal;
+$brand-primary:                    $teal;
+$jumbotron-bg:                     $white;
 
 /* Mixins */
 @mixin transition ($seconds) {
@@ -30,14 +36,37 @@ $jumbotron-bg:                     white;
 	-o-transition: $seconds;
 	transition: $seconds;
 }
+@mixin border-radius ($px) {
+    -webkit-border-radius: $px;
+    -moz-border-radius: $px;
+    border-radius: $px;
+}
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
 a {
-	color: #D9853B;
+	color: $orange;
 	@include transition(.4s);
 	&:hover {
-	color: darken(#D9853B, 10%);
+	color: darken($orange, 10%);
 	text-decoration: none;
 	}
+}
+#blog-index {
+    div.individual-post {
+        background-color: $white;
+        margin-bottom: 2rem;
+        @include border-radius (2px);
+        padding: 0 3rem 1.5rem 3rem;
+    }
+    a.text {
+        color: $text;
+        &:hover {
+            color: $text;
+        }
+    }
+    h2 {
+        font-size: 2.25rem;
+        margin-bottom: .75rem;
+    }
 }
