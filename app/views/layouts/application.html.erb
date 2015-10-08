@@ -9,12 +9,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<%= render 'layouts/nav' %>
 	<div class="container">
-<ul class="nav nav-tabs">
-	<li><%= link_to "Home", root_path %></li>
-	<li><%= link_to "About Me", about_path %></li>
-	<li><%= link_to "Contact Me", contact_path %></li>
-</ul>
 <%= yield %>
 </div>
 </body>
